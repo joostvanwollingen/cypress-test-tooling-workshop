@@ -8,7 +8,7 @@ describe('bol.com exercises', function () {
         cy
             .searchForTerm('G.I. Joe: The Rise Of Cobra')
             .openFirstItemOnListPage()
-            .get("a[data-test='ribbon-specifications-show-more-link']").click()
+            .get("a[href='#product_specifications'].link-cta").click()
             .get("span[data-test='showmore-text-more']").click()
             .get("dt.specs__title:contains('Budget')+dd.specs__value:contains('$ 175.000.000')")
             .should("be.visible")
