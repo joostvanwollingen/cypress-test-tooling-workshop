@@ -39,7 +39,7 @@ describe('Rijksmuseum exercises', function () {
             .siblings().should("contain","Volwassenen: € 17,50")
     })
 
-    it.only('Find out if the admission price for an adult is still 17.50 euro - alternative', function() {
+    it('Find out if the admission price for an adult is still 17.50 euro - alternative', function() {
         cy
             .clickOn("Praktische info")
             .clickOn("Openingstijden en prijzen")
