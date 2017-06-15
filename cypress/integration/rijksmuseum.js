@@ -1,7 +1,7 @@
 describe('Rijksmuseum exercises', function () {
 
     beforeEach(function () {
-        cy.visit('https://www.rijksmuseum.nl');
+        cy.visit('https://www.rijksmuseum.nl')
 
     })
 

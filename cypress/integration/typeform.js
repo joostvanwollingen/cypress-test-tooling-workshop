@@ -1,7 +1,7 @@
 describe('typeform.com exercises', function () {
 
     beforeEach(function () {
-        cy.visit('https://fhoeben.typeform.com/to/fdx32Y');
+        cy.visit('https://fhoeben.typeform.com/to/fdx32Y')
 
     })
 
