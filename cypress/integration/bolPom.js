@@ -16,7 +16,7 @@ describe('bol.com exercises', function () {
         cy.visit('https://www.bol.com')
     })
 
-    it('Assert that GI Joe budget is 175.000.000', function() {
+    it('Try to navigate a bit with Page Object Model like code', function() {
 
         s.searchFor("G.I. Joe: The Rise Of Cobra")
         l.openProduct(3)
@@ -25,13 +25,6 @@ describe('bol.com exercises', function () {
         c.continueOrder()
         loginPage.login("user@gmail.com","wachtwoord")
 
-
-
-            // cy
-            // .get("a[href='#product_specifications'].link-cta").click()
-            // .get("span[data-test='showmore-text-more']").click()
-            // .get("dt.specs__title:contains('Budget')+dd.specs__value:contains('$ 175.000.000')")
-            // .should("be.visible")
     })
 
 })
