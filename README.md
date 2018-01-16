@@ -100,7 +100,7 @@ Writing locators every time we just want to click visible text gets a bit tiring
 Cypress.addParentCommand("clickOn", function (input) {
     var input = input || ""
 
-    var log = Cypress.Log.command({                       //Log to the console
+    var log = Cypress.log({                       //Log to the console
         name: "clickOn",
         message: [input],
         onConsole: function () {

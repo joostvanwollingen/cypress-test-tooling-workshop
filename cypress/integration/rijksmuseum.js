@@ -5,17 +5,17 @@ describe('Rijksmuseum exercises', function () {
 
     })
 
-    it('Find the agenda event for 2017-07-27', function() {
+    it('Find the agenda event for 2018-07-27', function() {
         cy
             .clickOn("Plan je bezoek")
             .clickOn("Nu in het museum")
             .clickOn("Dagagenda")
-            .openAgendaForDate("2017-07-27")
+            .openAgendaForDate("2018-07-27")
             .get("h1[data-bind='text: periodString']")
             .should("contain","11:00 - 12:00")
     })
 
-    it('Find the agenda event for 2017-07-27 - alternative', function () {
+    it('Find the agenda event for 2018-07-27 - alternative', function () {
         cy
             .get("span:contains('Plan je bezoek')").click()
             .get("a:contains('Nu in het museum')").click()

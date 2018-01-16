@@ -1,8 +1,8 @@
 //Bol.com
-Cypress.addParentCommand("searchForTerm", function (searchTerm) {
+Cypress.Commands.add("searchForTerm", function (searchTerm) {
     var searchTerm = searchTerm || "searchTerm"
 
-    var log = Cypress.Log.command({
+    var log = Cypress.log({
         name: "searchForTerm",
         message: [searchTerm],
         onConsole: function () {
@@ -20,16 +20,16 @@ Cypress.addParentCommand("searchForTerm", function (searchTerm) {
         })
 })
 
-Cypress.addParentCommand("openFirstItemOnListPage", function () {
+Cypress.Commands.add("openFirstItemOnListPage", function () {
     cy.get("a[data-test='product-title']")
         .first().click()
 })
 
 //TypeForm
-Cypress.addParentCommand("answerFormQuestion", function (input) {
+Cypress.Commands.add("answerFormQuestion", function (input) {
     var input = input || ""
 
-    var log = Cypress.Log.command({
+    var log = Cypress.log({
         name: "answerFormQuestion",
         message: [input],
         onConsole: function () {
@@ -48,10 +48,10 @@ Cypress.addParentCommand("answerFormQuestion", function (input) {
         })
 })
 
-Cypress.addParentCommand("selectFormOption", function (input) {
+Cypress.Commands.add("selectFormOption", function (input) {
     var input = input || ""
 
-    var log = Cypress.Log.command({
+    var log = Cypress.log({
         name: "selectFormOption",
         message: [input],
         onConsole: function () {
@@ -71,10 +71,10 @@ Cypress.addParentCommand("selectFormOption", function (input) {
 })
 
 //Rijksmuseum
-Cypress.addParentCommand("clickOn", function (input) {
+Cypress.Commands.add("clickOn", function (input) {
     var input = input || ""
 
-    var log = Cypress.Log.command({
+    var log = Cypress.log({
         name: "clickOn",
         message: [input],
         onConsole: function () {
@@ -93,7 +93,7 @@ Cypress.addParentCommand("clickOn", function (input) {
         })
 })
 
-Cypress.addParentCommand("openAgendaForDate", function (date) {
+Cypress.Commands.add("openAgendaForDate", function (date) {
     var desiredDate = new Date(date) || "";
     var desiredYear = desiredDate.getFullYear();
     var desiredMonth = desiredDate.getMonth();
@@ -108,7 +108,7 @@ Cypress.addParentCommand("openAgendaForDate", function (date) {
 
     var totalDifferenceInMonths = (yearDifference * 12) + monthDifference;
 
-    var log = Cypress.Log.command({
+    var log = Cypress.log({
         name: "openAgendaForDate",
         message: [date],
         onConsole: function () {
